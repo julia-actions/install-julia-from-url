@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install Julia from URL
-        uses: ./
+        uses: julia-actions/install-julia-from-url@main
         with:
           url: https://julialangnightlies.s3.amazonaws.com/bin/linux/x64/1.6/julia-377aa809eb-linux64.tar.gz
 
