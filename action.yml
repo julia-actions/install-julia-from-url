@@ -30,5 +30,5 @@ runs:
       shell: bash
 
     - name: Print Version
-      run: julia --version
+      run: julia --compile=min -O0 -e "using InteractiveUtils; versioninfo()"
       shell: bash
