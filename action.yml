@@ -20,7 +20,9 @@ runs:
   using: composite
   steps:
     - name: Download and extract Julia
-      run: curl -LsS "${{ inputs.url }}" | tar -xz -C "${{ inputs.target-dir }}"
+      run: |
+        mkdir -p "${{ inputs.target-dir }}"
+        curl -LsS "${{ inputs.url }}" | tar -xz -C "${{ inputs.target-dir }}"
       shell: bash
 
     - name: Add to PATH
