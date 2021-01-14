@@ -14,8 +14,5 @@ jobs:
         with:
           url: https://s3.amazonaws.com/julialangnightlies/assert_pretesting/freebsd/x64/1.7/julia-4e6a3a4140-freebsd64.tar.gz
 
-      - name: Add to PATH
-        run: echo "$HOME/julia/bin" >> "$GITHUB_PATH"
-
       - name: Show versioninfo()
         run: julia -e "using InteractiveUtils; versioninfo()"
