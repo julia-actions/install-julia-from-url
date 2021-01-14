@@ -24,6 +24,12 @@ runs:
         mkdir -p "${{ inputs.target-dir }}"
         curl -LsS "${{ inputs.url }}" | tar -xz --strip-components=1 -C "${{ inputs.target-dir }}"
       shell: bash
+      
+    - name: Debug
+      run: |
+        ls -la ~/julia
+        ls -la ~/julia/bin
+      shell: bash
 
     - name: Add to PATH
       run: echo "${{ inputs.target-dir }}/bin" >> "$GITHUB_PATH"
