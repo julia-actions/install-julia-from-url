@@ -36,5 +36,5 @@ runs:
       shell: bash
 
     - name: Print Version
-      run: julia --version
+      run: ~/julia/bin/julia --version
       shell: bash
