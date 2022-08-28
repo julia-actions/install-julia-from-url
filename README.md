@@ -1,1 +1,0 @@
-# install-julia-from-url
